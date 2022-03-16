@@ -47,27 +47,15 @@
     </div>
 </body>
 <script>
-    let h = document.getElementsByTagName("input")[0].value;
-    let w = document.getElementsByTagName("input")[1].value;
-    let btn = document.getElementsByName("button")[1];
-    let bmi = document.getElementsByName("span")[0];
-    let ends = document.getElementsByName("span")[1];
-
-    let bmiValue = w / Math.pow(h / 100 , 2);
-    // let bmi = w / (h / 100) **2;
+    let btn = document.getElementsByTagName("button")[1];
+    let bmi = document.getElementsByTagName("span")[0];
+    let ends = document.getElementsByTagName("span")[1];
+    // let bmiValue2 = w / (h / 100)**2;
     btn.addEventListener("click",function(){
-
+        let h = document.getElementsByTagName("input")[0].value;
+        let w = document.getElementsByTagName("input")[1].value;
+        let bmiValue = Math.floor(w / Math.pow(h / 100,2) * 100) / 100;
+        console.log(h,w,bmiValue);
     })
-
-    btn.addEventListener("click",bmi());
-
-    function bmi(){
-        bmi = bmiValue;
-    }
-
-
-
-
-    console.log(h,w,btn)
 </script>
 </html>
