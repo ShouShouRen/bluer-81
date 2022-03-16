@@ -1,0 +1,29 @@
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" id="btn">loding</button>
+    <div class="box"></div>
+</body>
+<script>
+    /*
+        let a = Math.random() = 0 <= x < 1;
+    */
+    let btn = document.getElementById("btn");
+    let nameF = ["a", "b", "c", "d", "e", "f", "g", "h"];
+    let nameT = ["h", "g", "f", "e", "d", "c", "b", "a"];
+    btn.addEventListener("click",function(){
+        let f = Math.round(Math.random() * 7);
+        let t = Math.round(Math.random() * 4);
+        let box = document.querySelector(".box");
+        box.textContent = nameF[f] + nameT[t];
+    })
+</script>
+
+</html>
