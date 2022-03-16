@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            設定盒子大小: 
+                width: 100%的範圍是可見的視窗範圍
+                       100vw的範圍是視窗邊界
+                height: 不建議在沒有固定高度值地方使用百比，因為會沒有反應;
+                但是在有絕對高度區域，可使用百分比
+                100vh的範圍是視窗的邊界，但不幫含電腦瀏覽器的頁籤、網址列、書籤列、下方工作列
+        */
+        body{
+            background-color: aqua;
+            padding: 0;
+            margin: 0;
+        }
+        p{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 100%;
+            height: 100vh;
+            background-color: brown;
+        }
+        .blue{
+            height: 50px;
+            background-color: blue;
+        }
+        .blue p{
+            width: 100px;
+            height: 200%;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, dolor voluptatibus praesentium voluptas aspernatur facere. Nobis omnis ratione alias sunt atque corrupti quod ad. Accusamus harum voluptate eligendi suscipit. Qui.</div>
+    <div class="blue">
+        <p></p>
+    </div>
+</body>
+</html>

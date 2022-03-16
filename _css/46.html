@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            color: inherit;
+            font-family: 'serif';
+        }
+        #menu{
+            width: 100%;
+            height: 80px;
+            line-height: 80px;
+            background-color: #2b2b2b;
+            color: #fff;
+        }
+        #menu ul {
+            width: 100%;
+            text-align: right;
+        }
+        #menu ul li {
+            display: inline-block;
+        }
+        #menu ul li a{
+            display: block;
+            padding: 0 1em;
+            transition: all 1s ease;
+        }
+        #menu ul li:hover a{
+            background-color: #000;
+            transform: scale(1.2) rotate(5deg);
+        }
+        .box{
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+        .box img{
+             width: 100%;
+             vertical-align: bottom;
+             transition: all 1s ease;
+        }
+        .box:hover img{
+            transform: scale(1.2);
+            /* filter: brightness(0.5); */
+        }
+        .box p{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            /* left: 1em;
+            top: 220px; */
+            top: 0;
+            left: 0;
+            line-height: 500px;
+            color: transparent;
+            font-weight: 900;
+            transition: all 1s ease;
+            text-align: center;
+        }
+        .box:hover p{
+            color: #FFF;
+            background-color: #00000080;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li>
+                <li><a href="#!">HOME</a></li>
+                <li><a href="#!">SERVICE</a></li>
+                <li><a href="#!">ABOUT</a></li>
+                <li><a href="#!">CONTENT</a></li>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <img src="https://picsum.photos/600/600?random=1" alt="">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br> Eveniet facilis rem asperiores cumque expedita pariatur<br> officia suscipit minima dolor aperiam?
+        </p>
+    </div>
+</body>
+</html>

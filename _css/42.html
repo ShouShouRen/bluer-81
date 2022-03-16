@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        transition-property: all;轉場屬性
+        transition-duration: 10s;轉長時間
+        transition-delay: ;延遲
+        transition-timing-function:;轉場曲線
+        */
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        .box{
+            width: 100%;
+            height: 100vh;
+            line-height: 100vh;
+            text-align: center;
+        }
+        .box .btn{
+            padding: 0.3em 0.5em;
+            background-color: #000066;
+            color: #fff;
+            font-family: 'Arial';
+            font-weight: 900;
+            font-size: 40px;
+            border-radius: 0.2em;
+            transition: all .3s ease;
+            transition-property: all;
+        }
+        .box .btn:hover{
+            background-color: #660000;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="#!" class="btn">click me</a>
+    </div>
+</body>
+</html>

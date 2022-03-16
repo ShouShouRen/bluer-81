@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        img{
+            width: 100%;
+            vertical-align: bottom;
+            position: absolute;
+            position: relative;
+            top: 500px;
+            left: 200px;
+        }
+        body{
+            width: 200vh;
+        }
+        .div1{
+            width: 800px;
+            height: 600px;
+            background-color: blue;
+            margin: 200px auto;
+            position: relative;
+        }
+        .banner{
+            width: 100%;
+            height: 200px;
+            background-color: blue;
+            margin: 200px auto;
+            position: relative;
+        }
+        menu{
+            width: 100%;
+            height: 100px;
+            background-color: #000;
+            position: sticky;
+            top: 0;
+        }
+        menu #hamburger{
+            width: 2em;
+            height: 1em;
+            position: absolute;
+            top: calc(50px - 0.5em);
+            right: 5em;
+        }
+        menu #hamburger *[class^=ham]{
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            transform-origin: 0 0;
+        }
+        menu #hamburger .hamT{
+            top: 0;
+        }
+        menu #hamburger .hamM{
+            top: calc(0.5em - 1px);
+        }
+        menu #hamburger .hamB{
+            bottom: 0;
+        }
+        menu #hamburger:hover .hamT{
+            transform: rotate(25deg);
+        }
+        menu #hamburger:hover .hamM{
+            opacity: 0;
+        }
+        menu #hamburger:hover .hamB{
+            transform: rotate(-25deg);
+        }
+    </style>
+</head>
+<body>
+    <menu>
+        <div id="hamburger">
+            <div class="hamT"></div>
+            <div class="hamM"></div>
+            <div class="hamB"></div>
+        </div>
+    </menu>
+    <!-- <div class="div1">
+        <img src="https://picsum.photos/id/237/800/600" alt="">
+    </div> -->
+</body>
+</html>

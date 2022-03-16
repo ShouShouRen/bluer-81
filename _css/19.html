@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            *:all element
+            *[class^=btn]:開頭有btn的class
+            *[class$=btn]:結尾有btn的class
+            *[class*=btn]:只要名字有btn的class
+        */
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        *[class*=btn]{
+            width: 100px;
+            height: 2.5em;
+            text-align: center;
+            background: blue;
+            color: white;
+            font-weight: 900;
+            line-height: 2.5em;
+        }
+        .btn-red{
+            background-color: red;
+        }
+        .btn-green{
+            background-color: green;
+        }
+        .btn-blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn-red">More...</div>
+    <div class="btn-green">More...</div>
+    <div class="btn-blue">More...</div>
+    <hr>
+    <div class="red-btn">More...</div>
+    <div class="green-btn">More...</div>
+    <div class="blue-btn">More...</div>
+</body>
+</html>

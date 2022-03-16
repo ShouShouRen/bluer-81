@@ -1,0 +1,58 @@
+// @for $i from i through 40{
+//     .p-#{$i}{
+//         padding: calc(0.5em * #{$i});
+//     }
+// }
+$colors: pink,red , darkred , orange , yellow ,lightyellow , blue , green ,indigo;
+$red: #ff5b5b;
+$green: #16ff16;
+$blue: #000062;
+$indigo: #9900AA;
+$theme: #ffeeb5;
+
+$color2: (
+    "red":$red,
+    "green":$green,
+    "blue":$blue,
+    "indigo":$indigo,
+    "theme": $theme
+);
+
+@each $i,$c in $color2 {
+    .text-#{$i}{
+        color: #{$c};
+    }
+}
+
+@mixin border-radius($i) {
+    @if $i < 5 {
+        .border-red{
+            border: $i solid red;
+        }
+    }
+    @else{
+        .border-blue{
+            border: $i solid blue;
+        }
+    }
+}
+
+@mixin booleam($i) {
+    @if $i == "true"{
+        .text{
+            color: red;
+        }
+    }
+    @else{
+        .text:hover{
+            color: blue;
+        }
+    }
+}
+
+
+@include border-radius(2px);
+@include border-radius(6px);
+
+@include booleam("true");
+@include booleam("false");

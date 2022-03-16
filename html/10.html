@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <input type="text" name="user" placeholder="請輸入帳號" maxlength="6"><br>
+        <input type="password" name="pw" id="pw" placeholder="請輸入密碼" minlength="6"><button type="button"
+            id="btn">顯示</button><br>
+        <input type="text" name="cpu" value="https://"><br>
+        <input type="hidden" name="num" value="B" readonly>
+        <input type="number" name="count" placeholder="數量" min="0" max="120" step="12">隻<br>
+        <input type="text" name="idNum" placeholder="請輸入身分證字號" maxlength="10" pattern="[A-Z]{1}[1-2]{1}[0-9]{8}"><br>
+        <input type="email" name="email" placeholder="請輸入電子郵件"><br>
+        <input type="tel" name="tel" placeholder="請輸入電話號碼" pattern="[0]{1}[0-9]{9}" maxlength="10" title="請輸入區碼"><br>
+        <input type="url" name="url"><br>
+        <input type="range" name="range"><span id="text"></span><br>
+        <input type="color" name="" id=""><br>
+        <input type="search" value=""><br>
+        <input type="image" src="https://picsum.photos/id/34/200/200" alt=""><br>
+        <input type="file">
+        <button type="submit">送出</button>
+    </form>
+</body>
+
+</html>
+<script>
+    let pw = document.getElementById("pw");
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click", function () {
+        if (pw.getAttribute("type") == "password" || pw.getAttribute("type") == "") {
+            pw.setAttribute("type", "text");
+            btn.textContent = "隱藏";
+        } else {
+            pw.setAttribute("type", "password");
+            btn.textContent = "顯示";
+        }
+    })
+    // let range = document.getElementById("range");
+    // let text = document.getElementById("text");
+</script>

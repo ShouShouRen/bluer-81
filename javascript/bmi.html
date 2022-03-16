@@ -1,0 +1,26 @@
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let h = 180;
+    let w = 70;
+    let bmi = w / ((h / 100) ** 2);
+    console.log(bmi);
+    if(bmi<18){
+        console.log("太輕");
+    }else if(bmi<30){
+        console.log("標準");
+    }else if(bmi<35){
+        console.log("在吃啊");
+    }else{
+        console.log("你是鬼");
+    }
+</script>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="GET">
+        <input type="text" name="user" placeholder="請輸入帳號" maxlength="6">
+        <br>
+        <input type="password" name="password" id="pw" placeholder="請輸入密碼" minlength="6"><button type="button" id="btn">顯示</button>
+        <br>
+        <input type="text" name="cpu" value="https://www.google.com.tw" readonly>
+        <br>
+        <input type="number" name="count" placeholder="數量" min="0" max="120" step="12">
+        <button type="submit">送出</button>
+    </form>
+</body>
+</html>
+<script>
+    let pw = document.querySelector('#pw');
+    let btn = document.querySelector('#btn');
+    btn.addEventListener("click",function(){
+        if(pw.getAttribute("type") == "password" || pw.getAttribute("type") == ""){
+            pw.setAttribute("type","text");
+            btn.textContent = "隱藏";
+        }else{
+            pw.setAttribute("type","password");
+            btn.textContent = "顯示";
+        }
+    })
+</script>
+<!-- <form action="#" method="post">
+    <input type="text" placeholder="請輸入帳號">
+    <br>
+    <input type="password" placeholder="請輸入密碼">
+    <br>
+    <input type="mail">
+    <br>
+    <input type="phone">
+    <br>
+    <input type="checkbox">
+    <br>
+    <input type="hidden">
+    <br>
+    <input type="number" name="" id="">
+    <br>
+    <input type="date">
+    <br>
+    <input type="file">
+    <br>
+    <input type="image">
+    <br>
+    <input type="text">
+    <br>
+    <input type="color">
+    <br>
+    <input type="url">
+    <br>
+    <input type="search">
+    <br>
+    <input type="range">
+    <br>
+    <input type="tel">
+    <br>
+    <input type="time">
+    <br>
+    <input type="radio">
+    <br>
+    <input type="reset">
+    <input type="submit" value="送出">
+</form> -->

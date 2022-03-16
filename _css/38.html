@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            /* list-style-type: disc; */
+            font-family: 'serif';
+            color: inherit;
+        }
+        header{
+            width: 100%;
+            height: 80px;
+            background-color: #000;
+            color: #fff;
+            line-height: 80px;
+            padding: 0 2em;
+        }
+        header #logo{
+            width: 20%;
+            float: left;
+        }
+        header menu{
+            width: 80%;
+            float: left;
+        }
+        header menu ul{
+            width: 100%;
+            text-align: right;
+        }
+        header menu ul li{
+            display: inline-block;
+        }
+        header menu ul li a{
+            display: block;
+            padding: 0 0.5em;
+        }
+        #theme{
+            width: 100%;
+        }
+        #theme img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo"><h1>my logo</h1></div>
+        <menu>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">service</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </menu>
+    </header>
+    <div id="theme">
+        <img src="https://picsum.photos/id/210/1600/800" alt="">
+    </div>
+</body>
+</html>

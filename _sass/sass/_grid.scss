@@ -1,0 +1,203 @@
+@mixin default {
+    @for $i from 1 through 12 {
+        .grid-#{$i}{
+            width: calc(100% / 12 * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .p-#{$i}{
+            padding: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .p-t-#{$i}{
+            padding-top: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .p-r-#{$i}{
+            padding-right: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .p-b-#{$i}{
+            padding-bottom: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .p-l-#{$i}{
+            padding-left: calc(0.5em * #{$i});
+        }
+    }
+    @each $i in $displays {
+        .d-#{$i}{
+            display: #{$i};
+        }
+    }
+    @each $i in $flexs {
+        .dflex-#{$i}{
+            flex-wrap: #{$i};
+        }
+    }
+    @each $i in $aligns{
+        .dalignX-#{$i}{
+            justify-content: #{$i};
+        }
+        .dalignY-#{$i}{
+            align-items: #{$i};
+        }
+    }
+    @each $p in list {
+
+    }
+}
+@mixin table {
+    @for $i from 1 through 12 {
+        .grid-s-#{$i}{
+            width: calc(100% / 12 * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .ps-#{$i}{
+            padding: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .ps-t-#{$i}{
+            padding-top: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .ps-r-#{$i}{
+            padding-right: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .ps-b-#{$i}{
+            padding-bottom: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .ps-l-#{$i}{
+            padding-left: calc(0.5em * #{$i});
+        }
+    }
+    @each $i in $displays {
+        .d-s-#{$i}{
+            display: #{$i};
+        }
+    }
+    @each $i in $flexs {
+        .dflex-s-#{$i}{
+            flex-wrap: #{$i};
+        }
+    }
+    @each $i in $aligns{
+        .dalignX-s-#{$i}{
+            justify-content: #{$i};
+        }
+        .dalignY-s-#{$i}{
+            align-items: #{$i};
+        }
+    }
+}
+@mixin book {
+    @for $i from 1 through 12 {
+        .grid-m-#{$i}{
+            width: calc(100% / 12 * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .pm-#{$i}{
+            padding: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .pm-t-#{$i}{
+            padding-top: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .pm-r-#{$i}{
+            padding-right: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .pm-b-#{$i}{
+            padding-bottom: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .pm-l-#{$i}{
+            padding-left: calc(0.5em * #{$i});
+        }
+    }
+    @each $i in $displays {
+        .d-m-#{$i}{
+            display: #{$i};
+        }
+    }
+    @each $i in $flexs {
+        .dflex-m-#{$i}{
+            flex-wrap: #{$i};
+        }
+    }
+    @each $i in $aligns{
+        .dalignX-m-#{$i}{
+            justify-content: #{$i};
+        }
+        .dalignY-m-#{$i}{
+            align-items: #{$i};
+        }
+    }
+}
+@mixin desk {
+    @for $i from 1 through 12 {
+        .grid-xl-#{$i}{
+            width: calc(100% / 12 * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .pxl-#{$i}{
+            padding: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .pxl-t-#{$i}{
+            padding-top: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .pxl-r-#{$i}{
+            padding-right: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .pxl-b-#{$i}{
+            padding-bottom: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40 {
+        .pxl-l-#{$i}{
+            padding-left: calc(0.5em * #{$i});
+        }
+    }
+    @each $i in $displays {
+        .d-xl-#{$i}{
+            display: #{$i};
+        }
+    }
+    @each $i in $flexs {
+        .dflex-#{$i}{
+            flex-wrap: #{$i};
+        }
+    }
+    @each $i in $aligns{
+        .dalignX-xl-#{$i}{
+            justify-content: #{$i};
+        }
+        .dalignY-xl-#{$i}{
+            align-items: #{$i};
+        }
+    }
+}

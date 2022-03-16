@@ -1,0 +1,18 @@
+@import "var";
+@mixin text-color {
+    @each $i,$c in $colors {
+        .text-#{$i}{
+            color: #{$c};
+        }
+    }
+    @each $w,$v in $weights {
+        .text-#{$w}{
+            font-weight: #{$v};
+        }
+    }
+    @each $a in $aligns {
+        .text-#{$a}{
+            text-align: #{$a};
+        }
+    }
+}

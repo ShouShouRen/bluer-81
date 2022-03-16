@@ -1,0 +1,41 @@
+$red: #FF0055;
+$orange: #ff7700;
+$yellow: #DDDD00;
+$green: #00FF00;
+$blue: #00DDDD;
+$darkblue: #000088;
+$indigo: #880088;
+$white: #FFFFFF;
+$black: #2B2B2B;
+$gray: #5c5c5c;
+
+$colors:(
+    "red": $red,
+    "orange": $orange,
+    "yellow": $yellow,
+    "green": $green,
+    "blue": $blue,
+    "darkblue": $darkblue,
+    "indigo": $indigo,
+    "white": $white,
+    "black": $black,
+    "gray": $gray,
+);
+
+$thin: 100;
+$normal: 400;
+$bold: 900;
+
+$weights:(
+    "thin": $thin,
+    "normal": $normal,
+    "bold": $bold,
+);
+
+$aligns: left,center,right,justify;
+
+$displays: flex,none,inline,block,inline-block;
+$flexs: wrap,nowrap;
+$flex-aligns: flex-start,flex-end,center;
+
+$positions: static,absolute,relative,sticky,fixed;

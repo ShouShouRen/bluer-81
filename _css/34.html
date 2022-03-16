@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            關閉浮塊clear
+                值：
+                    left    ：關閉靠左邊的浮塊
+                    right   ：關閉靠右邊的浮塊
+                    both    ：關閉所有的浮塊
+                    none    ：取消關閉
+        
+        */
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            color: inherit;
+        }
+        ul{
+            width: 100%;
+            background-color: black;
+            color: white;
+            font-weight: 900;
+        }
+        ul li{
+            float: left;
+            padding: 0.5em 1em;
+        }
+        .abc{
+            display: block;
+            clear: left;
+        }
+        footer{
+            width: 100%;
+            height: 200px;
+            background-color: darkred;
+        }
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">我的首頁</a></li>
+        <li><a href="#">關於我們</a></li>
+        <li><a href="#">服務項目</a></li>
+        <li><a href="#">聯絡我們</a></li>
+        <div class="abc"></div>
+    </ul>
+    <ul class="clearfix">
+        <li style="background-color: blueviolet;"><a href="#">我的首頁</a></li>
+        <li><a href="#">關於我們</a></li>
+        <li><a href="#">服務項目</a></li>
+        <li><a href="#">聯絡我們</a></li>
+    </ul>
+    <footer></footer>
+</body>
+</html>

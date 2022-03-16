@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        img{
+            width: 100%;
+            vertical-align: bottom;
+        }
+        header{
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+        }
+        menu{
+            width: 100%;
+            height: 100px;
+            background-color: darkblue;
+        }
+        #about{
+            width: 100%;
+            height: 200vh;
+            background-color: #ffffdd;
+        }
+        #service{
+            width: 100%;
+            height: 200vh;
+            background-color: #DDFFFF;
+        }
+        footer{
+            width: 100%;
+            height: 100px;
+            background-color: darkblue;
+            color: #fff;
+        }
+        #ads{
+            width: 350px;
+            height: 450px;
+            background-color: #f00;
+            color: #000;
+            position: fixed;
+            top: 5em;
+            right: -315px;
+            transition: all .3s ease;
+        }
+        #ads:hover{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://picsum.photos/id/34/1600/650" alt="">
+    </header>
+    <menu>menu</menu>
+    <div id="about">about</div>
+    <div id="service">service</div>
+    <footer>footer</footer>
+    <div id="ads">
+        廣告
+    </div>
+</body>
+</html>

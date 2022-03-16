@@ -1,0 +1,28 @@
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: calc(100% / 9 - 1.5em);
+            display: inline-block;
+            padding: 1em;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    for(i=2;i<10;i++){
+        document.write("<br>");
+        for(j=1;j<10;j++){
+            console.log(i + "*" +j + "=" + i*j);
+            document.write("<div class='box'>" + i + "&nbsp;*&nbsp;" + j + "&nbsp;=&nbsp;" + i*j + "</div>");
+        }
+    }
+</script>
+</html>

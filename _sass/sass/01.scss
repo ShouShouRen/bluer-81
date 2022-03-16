@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+// menu{
+//     width: 100%;
+//     background-color: #000;
+//     color: white;
+// }
+// menu ul{
+//     width: 100%;
+//     text-align: right;
+// }
+// menu ul li{
+//     display: inline-block;
+// }
+// menu ul li a{
+//     display: block;
+//     padding: 1em 0.5em;
+// }
+$themeColor: #870;
+$textColor: red;
+@mixin usuallys{
+    background-color: #002903;
+    color: white;
+    font-weight: 900;
+    font-family: serif;
+    padding: 2em;
+    height: auto;
+}
+@mixin offten($b,$c,$w){
+    background-color: $b;
+    color: $c;
+    font-weight: $w;
+}
+menu{
+    width: 100%;
+    // line-height: 48px;
+    // background-color: $themeColor;
+    // color: $textColor;
+    @include usuallys();
+    ul{
+        width: 100%;
+        text-align: center;
+        li{
+            display: inline-block;
+            a{
+                display: block;
+                padding: 1em .5em;
+            }
+        }
+    }
+}
+#theme{
+    width: 100%;
+    height: 500vh;
+    @include offten(darkblue, white, 500);
+}
+footer{
+    text-align: center; 
+    // background-color: $themeColor;
+    // color: $textColor;
+    @include usuallys();
+    padding: 2em;
+}
+@for $i from 1 to 12 {
+    .col-#{$i}{
+        width: calc(100% / 12 * #{$i});
+    }
+}
+@for $i from 1 through 12 {
+    .col-#{$i}{
+        width: calc(100% / 12 * #{$i});
+    }
+}
+@for $i from 1 through 40 {
+    .p-#{$i}{
+        padding: calc(0.5em * #{$i});
+    }
+}
+@for $i from 1 through 40 {
+    .p-t-#{$i}{
+        padding-top: calc(0.5em * #{$i});
+    }
+}
+@for $i from 1 through 40 {
+    .p-r-#{$i}{
+        padding-right: calc(0.5em * #{$i});
+    }
+}
+@for $i from 1 through 40 {
+    .p-b-#{$i}{
+        padding-bottom: calc(0.5em * #{$i});
+    }
+}
+@for $i from 1 through 40 {
+    .p-l-#{$i}{
+        padding-left: calc(0.5em * #{$i});
+    }
+}
+@media(min-width: 768px){
+    @for $i from 1 through 40{
+        .pm-#{$i}{
+            padding: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40{
+        .pm-t-#{$i}{
+            padding: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40{
+        .pm-r-#{$i}{
+            padding: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40{
+        .pm-b-#{$i}{
+            padding: calc(0.5em * #{$i});
+        }
+    }
+    @for $i from 1 through 40{
+        .pm-l-#{$i}{
+            padding: calc(0.5em * #{$i});
+        }
+    }
+}
+
+

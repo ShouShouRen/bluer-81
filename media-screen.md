@@ -1,0 +1,16 @@
+phone:
+        375px
+        414px
+        560px
+table:
+        768px
+        1024px
+laptop:
+        1024px
+        1200px
+        1366px
+        1440px
+desktop:
+        1440px
+        1600px
+        1920px
