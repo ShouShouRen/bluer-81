@@ -1,4 +1,5 @@
-<html lang="zh-Hant-TW">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,10 +12,11 @@
             box-sizing: border-box;
         }
         .box{
-            width: 450px;
+            width: 350px;
             margin: auto;
             text-align: right;
-            background-color: #098;
+            padding: 1em;
+            background-color: #b4ffa1;
         }
         .box input{
             width: 100%;
@@ -22,43 +24,71 @@
             padding: 0.3em;
             margin: 0.5em 0;
         }
+        .box button{
+            padding: 0.3em 1em;
+            font-size: 1em;
+        }
         .box h1{
             text-align: center;
         }
         .box h3{
             text-align: left;
-            padding: .5em 0;
-        }
-        .box button{
-            padding: .3em 1em;
-            font-size: 1em;
+            padding: 0.5em 0;
         }
     </style>
 </head>
 <body>
     <div class="box">
-        <h1>INPUT YOUR BMI</h1>
-        <input type="text" placeholder="input your height">
-        <input type="text" placeholder="input your weight">
-        <button type="reset">reset</button>
-        <button type="button">submit</button>
-        <h3>YOUR BIM:<span></span></h3>
-        <h3>IS:<span></span></h3>
+        <h1>BMI檢測器</h1>
+        <input type="text" placeholder="請輸入身高（cm）">
+        <input type="text" placeholder="請輸入體重（Kg）">
+        <button type="reset">清除</button>
+        <button type="button">提交</button>
+        <h3>您的BMI：<span></span></h3>
+        <h3>判定狀況：<span></span></h3>
     </div>
 </body>
+</html>
 <script>
+    /*
+        當我們使用表單標籤讀取其值時，我們要用.value去讀取
+        其他的標籤要讀取其值時，我們要用.textContent
+
+        運算函式：
+            Math.pow()：計算次方
+            Math.floor()：無條件捨去
+            Math.ceil()：無條件進位
+            Math.round()：四捨五入
+    */
+
     let btn = document.getElementsByTagName("button")[1];
+    let btnReset = document.getElementsByTagName("button")[0];
     let bmi = document.getElementsByTagName("span")[0];
     let ends = document.getElementsByTagName("span")[1];
     // let bmiValue2 = w / (h / 100)**2;
     btn.addEventListener("click",function(){
-        let h = document.getElementsByTagName("input")[0].value;
-        let w = document.getElementsByTagName("input")[1].value;
-        let bmiValue = Math.floor(w / Math.pow(h / 100,2) * 100) / 100;
-        console.log(h,w,bmiValue);
+        let h = document.getElementsByTagName("input")[0];
+        let w = document.getElementsByTagName("input")[1];
+        let bmiValue = Math.floor(w.value / Math.pow(h.value / 100,2) * 100) / 100;
+        bmi.textContent = bmiValue;
+        if(isNaN(bmiValue) || bmiValue <= 0 || bmiValue == Infinity){
+            ends.textContent = "輸入錯誤";
+        }else if(bmiValue < 18){
+            ends.textContent = "過輕";
+        }else if(bmiValue < 24){
+            ends.textContent = "標準";
+        }else if(bmiValue < 30){
+            ends.textContent = "過重";
+        }else if(bmiValue < 34){
+            ends.textContent = "超重";
+        }else{
+            ends.textContent = "超肥";
+        }
+        h.value = "";
+        w.value = "";
     })
-
-
-    
+    btnReset.addEventListener("click",function(){
+        document.getElementsByTagName("input")[0].value = "";
+        document.getElementsByTagName("input")[1].value = "";
+    })
 </script>
-</html>
