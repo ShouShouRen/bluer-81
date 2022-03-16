@@ -16,11 +16,11 @@
         let a = Math.random() = 0 <= x < 1;
     */
     let btn = document.getElementById("btn");
-    let nameF = ["a", "b", "c", "d", "e", "f", "g", "h"];
-    let nameT = ["h", "g", "f", "e", "d", "c", "b", "a"];
+    let nameF = ["apple", "bananna", "cat", "dog", "eggg", "fish", "grava", "height"];
+    let nameT = ["has", "go", "for", "even", "do", "can", "be", "an"];
     btn.addEventListener("click",function(){
-        let f = Math.round(Math.random() * 7);
-        let t = Math.round(Math.random() * 4);
+        let f = Math.round(Math.random() * (nameF.length - 1));
+        let t = Math.round(Math.random() * (nameT.length - 1));
         let box = document.querySelector(".box");
         box.textContent = nameF[f] + nameT[t];
     })
