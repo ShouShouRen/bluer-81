@@ -27,6 +27,7 @@
         }
         .box h3{
             text-align: left;
+            padding: .5em 0;
         }
         .box button{
             padding: .3em 1em;
@@ -45,4 +46,28 @@
         <h3>IS:<span></span></h3>
     </div>
 </body>
+<script>
+    let h = document.getElementsByTagName("input")[0].value;
+    let w = document.getElementsByTagName("input")[1].value;
+    let btn = document.getElementsByName("button")[1];
+    let bmi = document.getElementsByName("span")[0];
+    let ends = document.getElementsByName("span")[1];
+
+    let bmiValue = w / Math.pow(h / 100 , 2);
+    // let bmi = w / (h / 100) **2;
+    btn.addEventListener("click",function(){
+
+    })
+
+    btn.addEventListener("click",bmi());
+
+    function bmi(){
+        bmi = bmiValue;
+    }
+
+
+
+
+    console.log(h,w,btn)
+</script>
 </html>
