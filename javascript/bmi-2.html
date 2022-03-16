@@ -53,6 +53,7 @@
     /*
         當我們使用表單標籤讀取其值時，我們要用.value去讀取
         其他的標籤要讀取其值時，我們要用.textContent
+        .style 元素的樣式
 
         運算函式：
             Math.pow()：計算次方
@@ -73,16 +74,28 @@
         bmi.textContent = bmiValue;
         if(isNaN(bmiValue) || bmiValue <= 0 || bmiValue == Infinity){
             ends.textContent = "輸入錯誤";
+            ends.style.color = "red";
+            ends.style.fontSize = "2em";
         }else if(bmiValue < 18){
             ends.textContent = "過輕";
+            ends.style.color = "lightgreen";
+            ends.style.fontSize = "2em";
         }else if(bmiValue < 24){
             ends.textContent = "標準";
+            ends.style.color = "green";
+            ends.style.fontSize = "2em";
         }else if(bmiValue < 30){
             ends.textContent = "過重";
+            ends.style.color = "orange";
+            ends.style.fontSize = "2em";
         }else if(bmiValue < 34){
             ends.textContent = "超重";
+            ends.style.color = "yellow";
+            ends.style.fontSize = "2em";
         }else{
             ends.textContent = "超肥";
+            ends.style.color = "red";
+            ends.style.fontSize = "2em";
         }
         h.value = "";
         w.value = "";
