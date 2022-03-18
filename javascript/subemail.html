@@ -1,0 +1,24 @@
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button type="button">submit</button>
+</body>
+<script>
+    setInterval("disableds()",500);
+    function disableds(){
+        let user = document.getElementsByTagName("input")[0];
+        let btn = document.getElementsByTagName("button")[0];
+        if(user == ""){
+            btn.disabled = true;
+        }else{
+            btn.disabled = false;
+        }
+    }
+</script>
+</html>

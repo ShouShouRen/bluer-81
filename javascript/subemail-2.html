@@ -1,0 +1,29 @@
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button">submit mail</button>
+</body>
+<script>
+    let btn = document.getElementsByTagName("button")[0];
+    let strD = "submit mail";
+    let strS = "time out";
+    let x = 60;
+    btn.addEventListener("click",function(){
+        btn.disabled = true;
+        setInterval("run()",1000);
+    })
+    function run(){
+        --x;
+        btn.textContent = strS + x + "S";
+        if(x <= 1){
+            btn.textContent = strD;
+            btn.disabled = false;
+        }
+    }
+</script>
+</html>
