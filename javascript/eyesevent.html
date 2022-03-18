@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+</head>
+<body>
+    <input type="password" id="pw"><button type="button" id="btn"><i class="fa-solid fa-eye"></i></button>
+</body>
+</html>
+<script>
+    let pw = document.getElementById("pw");
+    let btn = document.getElementById("btn");
+    let i = document.getElementsByTagName("i")[0];
+    btn.addEventListener("click",function(){
+        let a = pw.getAttribute("type");
+        if(a == "password"){
+            pw.setAttribute("type","text");
+            i.setAttribute("class","fa-solid fa-eye-slash");
+        }else{
+            pw.setAttribute("type","password");
+            i.setAttribute("class","fa-solid fa-eye");
+        }
+    })
+    // btn.addEventListener("mousedown",function(){
+    //     pw.setAttribute("type","text");
+    //     i.setAttribute("class","fa-solid fa-eye-slash");
+    // })
+    // btn.addEventListener("mouseup",function(){
+    //     pw.setAttribute("type","password");
+    //     i.setAttribute("class","fa-solid fa-eye");
+    // })
+</script>

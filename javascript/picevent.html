@@ -1,0 +1,43 @@
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            vertical-align: bottom;
+        }
+        .box{
+            width: 800px;
+            margin: 5em auto;
+        }
+        .box #big{
+            width: 800px;
+        }
+        .box .small{
+            width: 197px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://picsum.photos/id/90/800/600" alt="" id="big">
+        <img src="https://picsum.photos/id/90/800/600" alt="" class="small">
+        <img src="https://picsum.photos/id/91/800/600" alt="" class="small">
+        <img src="https://picsum.photos/id/92/800/600" alt="" class="small">
+        <img src="https://picsum.photos/id/93/800/600" alt="" class="small">
+    </div>
+</body>
+<script>
+    let samllPic = document.getElementsByClassName("small");
+    for (const i of samllPic) {
+        i.addEventListener("click",function(){
+            console.log(this.getAttribute("src"));
+        })
+    }
+</script>
+</html>
