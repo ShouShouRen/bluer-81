@@ -1,4 +1,4 @@
-<html lang="zh-Hant-TW">
+<!-- <html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,5 +25,31 @@
             btn.disabled = false;
         }
     }
-</script>
-</html>
+</script>-->
+<html> 
+<head> 
+<title>點擊獲取驗證碼按鈕後按鈕變灰，倒計時一段時間後又可重復點擊</title> 
+</head> 
+<body> 
+<input type="button" id="btn" value="免費獲取驗證碼" /> 
+<script type="text/javascript"> 
+var wait=60; 
+function time(o) { 
+    if (wait == 0) { 
+      o.removeAttribute("disabled");      
+      o.value="免費獲取驗證碼"; 
+      wait = 60; 
+    } else { 
+      o.setAttribute("disabled", true); 
+      o.value=wait+"秒後可以重新發送"; 
+      wait--; 
+      setTimeout(function() { 
+        time(o) 
+      }, 
+      1000) 
+    } 
+  } 
+document.getElementById("btn").onclick=function(){time(this);} 
+</script> 
+</body> 
+</html> 
