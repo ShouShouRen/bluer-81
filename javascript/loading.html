@@ -4,10 +4,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .loading{
+            width: 100%;
+            height: 100vh;
+            background-color: #00000080;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        .loading .load{
+            width: 80px;
+            height: 80px;
+            background-color: transparent;
+            border: 5px solid #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50vh - 40px);
+            left: calc(50vw - 40px);
+            clip-path: polygon(0 0,50% 0,50% 100%,0% 100%);
+            animation: run 10s linear infinite;
+        }
+        @keyframes run {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(3600deg);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="loading">
         <div class="load"></div>
     </div>
 </body>
-</html>
+<script>
+    let loading = document.getElementsByClassName("loading")[0];
+    setTimeout("run()",3000);
+    function run(){
+        loading.remove();
+    }
+</script>
+</html> 
