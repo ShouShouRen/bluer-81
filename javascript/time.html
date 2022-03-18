@@ -7,9 +7,11 @@
 </head>
 <body>
     <h2></h2>
+    <h2></h2>
 </body>
 <script>
     let h2 = document.getElementsByTagName("h2")[0];
+    let h21 = document.getElementsByClassName("h2")[1];
     let monthArray = ["正月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
     let dayArray = ["日曜日","月曜日","水曜日","木曜日","金曜日","土曜日"]
     let d = new Date();
@@ -17,7 +19,12 @@
     let month = d.getMonth();
     let dates = d.getDate();
     let day = d.getDay();
-    
+    let hh =d.getHours();
+    let mm = d.getMinutes();
+    let ss =d.getSeconds();
+
+
     h2.textContent = "現在時間:" + year + monthArray[month] + dates + dayArray[day];
+    h21.textContent = "現在時間" + hh + ":" + mm + ":" + ss;
 </script>
 </html>

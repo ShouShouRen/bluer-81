@@ -1,0 +1,25 @@
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>現在時間:<span></span></h2>
+</body>
+<script>
+    let span = document.getElementsByTagName("span")[0];
+    let x = 20;
+    
+
+    setInterval("run()",1000);
+    function run(){
+        // let d = new Date();
+        // span.textContent = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        // console.log(d);
+        span.textContent = --x;
+        
+    }
+</script>
+</html>
