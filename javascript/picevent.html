@@ -34,9 +34,11 @@
 </body>
 <script>
     let samllPic = document.getElementsByClassName("small");
+    let bigPic = document.getElementById("big");
     for (const i of samllPic) {
         i.addEventListener("click",function(){
-            console.log(this.getAttribute("src"));
+            big.setAttribute("src",this.getAttribute("src"))
+            // console.log(this.getAttribute("src"));
         })
     }
 </script>
