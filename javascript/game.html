@@ -110,7 +110,7 @@
             <img src="images/1.png" alt="" id="player">
         </div>
         <div class="grid-12">
-            <h2 id="result">輸贏</h2>
+            <h2><span id="result"></span><br><span id="total"></span></h2>
         </div>
     </div>
     <div id="user">
@@ -132,6 +132,10 @@
     let Array = ["images/1.png","images/2.png","images/3.png"];
     let btn = document.getElementsByClassName("btn");
     let result = document.getElementById("result");
+    let total = document.getElementById("total");
+    let a = 0;
+    let b = 0;
+    let c = 0;
     for (const i of btn) {
         i.addEventListener("click",function(){
             let x = Math.round(Math.random() * 2);
@@ -140,16 +144,23 @@
             cpu.setAttribute("src",Array[x]);
             player.setAttribute("src",this.getAttribute("src"));
             if(player.getAttribute("src") == cpu.getAttribute("src")){
+                a++;
                 result.textContent = "平手";
             }else if(player.getAttribute("src") == Array[0] && cpu.getAttribute("src") == Array[2]){
+                b++;
                 result.textContent = "勝利";
             }else if(player.getAttribute("src") == Array[1] && cpu.getAttribute("src") == Array[0]){
+                b++;
                 result.textContent = "勝利";
             }else if(player.getAttribute("src") == Array[2] && cpu.getAttribute("src") == Array[1]){
+                b++;
                 result.textContent = "勝利";
             }else{
+                c++;
                 result.textContent = "你輸了";
             }
+            total.textContent = "平：" + a + "；贏：" + b + "；輸：" + c;
+            total.style.color = "red";
         })
     }
 </script>
