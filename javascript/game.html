@@ -92,14 +92,14 @@
     <div id="comp">
         <div class="grid-4">
             <h2>cpu</h2>
-            <img src="" alt="">
+            <img src="./images/1.png" alt="">
         </div>
         <div class="grid-3">
             <p>vs</p>
         </div>
         <div class="grid-4">
             <h2>user</h2>
-            <img src="" alt="">
+            <img src="./images/2.png" alt="">
         </div>
         <div class="grid-12">
             <h2>輸贏</h2>
@@ -107,17 +107,27 @@
     </div>
     <div id="user">
         <div class="grud-4">
-            <img src="" alt="">
+            <img src="./images/1.png" alt="" class="btn">
         </div>
         <div class="grud-4">
-            <img src="" alt="">
+            <img src="./images/2.png" alt="" class="btn">
         </div>
         <div class="grud-4">
-            <img src="" alt="">
+            <img src="./images/3.png" alt="" class="btn">
         </div>
     </div>
 </body>
 <script>
-
+    let Array = ["./images/1.png","./images/2.png","./images/3.png"]
+    let btn = document.querySelector(".btn");
+    for(const i of btn){
+        i.addEventListener("click",function(){
+            let x = Math.round(Math.random() * 2);
+            let cpu = document.querySelector("#cpu");
+            let player = document.querySelector("#player");
+            cpu.setAttribute("src",Array[x]);
+            player.setAttribute("src",this.getAttribute("src"));
+        })
+    }
 </script>
 </html>
