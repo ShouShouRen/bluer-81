@@ -1,0 +1,123 @@
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            color: inherit;
+            font-family: Arial, Helvetica, sans-serif;
+            vertical-align: bottom;
+        }
+        img{
+            width: 100%;
+        }
+        .grid-1{
+            width: calc(100% / 12 * 1);
+        }
+        .grid-2{
+            width: calc(100% / 12 * 2);
+        }
+        .grid-3{
+            width: calc(100% / 12 * 3);
+        }
+        .grid-4{
+            width: calc(100% / 12 * 4);
+        }
+        .grid-5{
+            width: calc(100% / 12 * 5);
+        }
+        .grid-6{
+            width: calc(100% / 12 * 6);
+        }
+        .grid-7{
+            width: calc(100% / 12 * 7);
+        }
+        .grid-8{
+            width: calc(100% / 12 * 8);
+        }
+        .grid-9{
+            width: calc(100% / 12 * 9);
+        }
+        .grid-10{
+            width: calc(100% / 12 * 10);
+        }
+        .grid-11{
+            width: calc(100% / 12 * 11);
+        }
+        .grid-12{
+            width: calc(100% / 12 * 12);
+        }
+        header{
+            width: 100%;
+            background-color: yellow;
+            color: white;
+        }
+        header h1{
+            text-align: center;
+            padding: 1em;
+        }
+        #comp{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #user{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        #user .grid-6{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>game</h1>
+    </header>
+    <div id="comp">
+        <div class="grid-4">
+            <h2>cpu</h2>
+            <img src="" alt="">
+        </div>
+        <div class="grid-3">
+            <p>vs</p>
+        </div>
+        <div class="grid-4">
+            <h2>user</h2>
+            <img src="" alt="">
+        </div>
+        <div class="grid-12">
+            <h2>輸贏</h2>
+        </div>
+    </div>
+    <div id="user">
+        <div class="grud-4">
+            <img src="" alt="">
+        </div>
+        <div class="grud-4">
+            <img src="" alt="">
+        </div>
+        <div class="grud-4">
+            <img src="" alt="">
+        </div>
+    </div>
+</body>
+<script>
+
+</script>
+</html>
