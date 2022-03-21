@@ -1,4 +1,5 @@
-<html lang="zh-Hant-TW">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,7 +56,7 @@
         }
         header{
             width: 100%;
-            background-color: yellow;
+            background-color: darkblue;
             color: white;
         }
         header h1{
@@ -69,65 +70,86 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding: 2em 20vw;
         }
         #user{
             width: 100%;
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-end;
+            padding: 1em 20vw;
         }
         #user .grid-6{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            
         }
-        
+        .btn{
+            transition: all 500ms ease;
+            cursor: pointer;
+        }
+        .btn:hover{
+            filter: brightness(0.8);
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>game</h1>
+        <h1>剪刀石頭布遊戲</h1>
     </header>
     <div id="comp">
         <div class="grid-4">
-            <h2>cpu</h2>
-            <img src="./images/1.png" id="cpu" alt="">
+            <h2>CPU</h2>
+            <img src="images/1.png" alt="" id="cpu">
         </div>
         <div class="grid-3">
-            <p>vs</p>
+            <p>VS</p>
         </div>
         <div class="grid-4">
-            <h2>user</h2>
-            <img src="./images/1.png" id="player" alt="">
+            <h2>USER</h2>
+            <img src="images/1.png" alt="" id="player">
         </div>
         <div class="grid-12">
             <h2 id="result">輸贏</h2>
         </div>
     </div>
     <div id="user">
-        <div class="grud-4">
-            <img src="./images/1.png" alt="" class="btn">
-        </div>
-        <div class="grud-4">
-            <img src="./images/2.png" alt="" class="btn">
-        </div>
-        <div class="grud-4">
-            <img src="./images/3.png" alt="" class="btn">
+        <div class="grid-6">
+            <div class="grid-4">
+                <img src="images/1.png" alt="" class="btn">
+            </div>
+            <div class="grid-4">
+                <img src="images/2.png" alt="" class="btn">
+            </div>
+            <div class="grid-4">
+                <img src="images/3.png" alt="" class="btn">
+            </div>
         </div>
     </div>
 </body>
+</html>
 <script>
-    let Array = ["./images/1.png","./images/2.png","./images/3.png"]
-    let btn = document.querySelector(".btn");
-    for(const i of btn){
+    let Array = ["images/1.png","images/2.png","images/3.png"];
+    let btn = document.getElementsByClassName("btn");
+    let result = document.getElementById("result");
+    for (const i of btn) {
         i.addEventListener("click",function(){
             let x = Math.round(Math.random() * 2);
-            let cpu = document.querySelector("#cpu");
-            let player = document.querySelector("#player");
+            let cpu = document.getElementById("cpu");
+            let player = document.getElementById("player");
             cpu.setAttribute("src",Array[x]);
             player.setAttribute("src",this.getAttribute("src"));
+            if(player.getAttribute("src") == cpu.getAttribute("src")){
+                result.textContent = "平手";
+            }else if(player.getAttribute("src") == Array[0] && cpu.getAttribute("src") == Array[2]){
+                result.textContent = "勝利";
+            }else if(player.getAttribute("src") == Array[1] && cpu.getAttribute("src") == Array[0]){
+                result.textContent = "勝利";
+            }else if(player.getAttribute("src") == Array[2] && cpu.getAttribute("src") == Array[1]){
+                result.textContent = "勝利";
+            }else{
+                result.textContent = "你輸了";
+            }
         })
     }
 </script>
-</html>
