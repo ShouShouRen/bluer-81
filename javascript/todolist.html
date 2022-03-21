@@ -1,24 +1,34 @@
 <html lang="zh-Hant-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <input type="text" id="txt"><button type="button" id="btn">ADD</button>
     <ul id="todo"></ul>
 </body>
 <script>
-    let txt = document.querySelector("#txt");
-    let btn = document.querySelector("#btn");
-    let ul = document.querySelector("#todo");
-    btn.addEventListener(function(){
+    let txt = document.getElementById("txt");
+    let btn = document.getElementById("btn");
+    let ul = document.getElementById("todo");
+    btn.addEventListener("click", function () {
         let li = document.createElement("li");
-        let litxt = document.createTextNode(txt.value) ;
-        li.appendChild(litxt);
+        let liTxt = document.createTextNode(txt.value);
+        li.setAttribute("class", "iteam");
+        li.appendChild(liTxt);
         ul.appendChild(li);
         txt.value = "";
+        let iteam = document.getElementsByClassName("iteam");
+        for (const i of iteam) {
+            i.addEventListener("click", function () {
+                this.remove();
+            })
+        }
     })
 </script>
+
 </html>
