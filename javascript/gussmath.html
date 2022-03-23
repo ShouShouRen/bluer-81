@@ -29,21 +29,29 @@
         }
         .box ol{
             width: 100%;
+            padding: 1em;
+        }
+        #reset{
+            display: block;
+            width: 80%;
+            margin: 1em auto;
         }
     </style>
 </head>
 <body>
     <div class="box">
         <h1>猜數字</h1>
-        <input type="text" id="user"><button type="button" id="btn">submit</button>
+        <input type="text" id="user" maxlength="4"><button type="button" id="btn">submit</button>
         <ol>
 
         </ol>
+        <button type="reset" onclick="window.location.reload()" id="reset">reset</button>
     </div>
 </body>
 <script>
     // CPU取亂數
     var cpu;
+    var x = 0;
     randoms();
     function randoms(){
         cpu = [Math.floor(Math.random()*10),Math.floor(Math.random()*10),Math.floor(Math.random()*10),Math.floor(Math.random()*10)];
@@ -54,5 +62,17 @@
         }
     }
     console.log(cpu);
+    let user = document.getElementById("user");
+    let btn = document.getElementById("btn");
+    let ol = document.getElementsByTagName("ol")[0];
+    btn.addEventListener("click",function(){
+        x++;
+        let li = document.createElement("li");
+        if(user.value == "" || isNaN(user.value)){
+            let liTxt = document.createTextNode("輸入錯誤" + x);
+            li.appendChild(liTxt);
+            ol.appendChild(li);
+        }
+    })
 </script>
 </html>
