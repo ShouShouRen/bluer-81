@@ -1,0 +1,25 @@
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery/dist/jquery.js"></script>
+</head>
+<body>
+    <h1>title1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dicta inventore numquam nemo? Soluta quidem harum reprehenderit cumque reiciendis accusantium. Porro modi ea asperiores aspernatur pariatur qui, libero debitis deserunt.</p>
+    <h1>title2</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem quas natus nemo quam? Non rem optio reprehenderit quaerat nostrum assumenda corporis perferendis natus suscipit cum! Vero veniam magnam omnis minima.</p>
+    <h1>title3</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et cupiditate officiis quae molestiae quod corrupti animi ducimus velit. Voluptatem atque aperiam earum corrupti similique libero soluta aliquid, deleniti quos?</p>
+</body>
+<script>
+    $(p).hide();
+    $("h1").click(function(){
+        $(this).next("p").stop().slideToggle(500);
+    })
+
+    // next():尋找同輩元素
+</script>
+</html>
