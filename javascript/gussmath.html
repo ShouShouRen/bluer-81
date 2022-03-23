@@ -80,16 +80,21 @@
         let li = document.createElement("li");
         if (user.value == "" || isNaN(user.value)) {
             let liTxt = document.createTextNode("請輸入數字");
+            li.style.color = "red";
             li.appendChild(liTxt);
             ol.appendChild(li);
         } else if (user.value[0] == user.value[1] || user.value[0] == user.value[2] || user.value[0] == user.value[3] || user.value[1] == user.value[2] || user.value[1] == user.value[3] || user.value[2] == user.value[3]) {
             let liTxt = document.createTextNode("輸入錯誤");
+            li.style.color = "red";
             li.appendChild(liTxt);
             ol.appendChild(li);
         } else if (user.value[0] == cpu[0] && user.value[1] == cpu[1] && user.value[2] == cpu[2] && user.value[3] == cpu[3]) {
             win();
         } else {
             ifs();
+        }
+        if(x>=10){
+            lost();
         }
         function ifs() {
             //A值的
@@ -123,10 +128,20 @@
             li.appendChild(liTxt);
             ol.appendChild(li);
         }
+        user.value = "";
     })
     function win() {
         let li = document.createElement("li");
-        let liTxt = document.createTextNode("您贏了！");
+        let liTxt = document.createTextNode("您贏了！" + user.value);
+        li.style.color = "blue";
+        li.appendChild(liTxt);
+        ol.appendChild(li);
+        btn.disabled = true;
+        document.getElementById("reset").style.display = "block";
+    }
+    function lost() {
+        let li = document.createElement("li");
+        let liTxt = document.createTextNode("您輸了！" + cpu[0] + cpu[1] + cpu[2] + cpu[3]);
         li.appendChild(liTxt);
         ol.appendChild(li);
         btn.disabled = true;
