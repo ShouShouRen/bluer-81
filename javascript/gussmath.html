@@ -1,43 +1,51 @@
 <html lang="zh-Hant-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
-        .box{
+
+        .box {
             width: 300px;
             margin: auto;
             background-color: bisque;
             padding: 1em;
         }
-        .box h1{
+
+        .box h1 {
             text-align: center;
         }
+
         .box input {
             width: 80%;
             padding: 0.5em 0;
         }
-        .box button{
+
+        .box button {
             width: 18%;
             padding: 0.4em 0;
         }
-        .box ol{
+
+        .box ol {
             width: 100%;
             padding: 1em;
         }
-        #reset{
+
+        #reset {
             display: block;
             width: 80%;
             margin: 1em auto;
         }
     </style>
 </head>
+
 <body>
     <div class="box">
         <h1>猜數字</h1>
@@ -53,11 +61,11 @@
     var cpu;
     var x = 0;
     randoms();
-    function randoms(){
-        cpu = [Math.floor(Math.random()*10),Math.floor(Math.random()*10),Math.floor(Math.random()*10),Math.floor(Math.random()*10)];
-        if(cpu[0]==cpu[1] || cpu[0]==cpu[2] || cpu[0]==cpu[3] || cpu[1]== cpu[2] || cpu[1]==cpu[3] || cpu[2]==cpu[3]){
+    function randoms() {
+        cpu = [Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10)];
+        if (cpu[0] == cpu[1] || cpu[0] == cpu[2] || cpu[0] == cpu[3] || cpu[1] == cpu[2] || cpu[1] == cpu[3] || cpu[2] == cpu[3]) {
             randoms();
-        }else if(cpu[0] == 0){
+        } else if (cpu[0] == 0) {
             randoms();
         }
     }
@@ -65,15 +73,65 @@
     let user = document.getElementById("user");
     let btn = document.getElementById("btn");
     let ol = document.getElementsByTagName("ol")[0];
-    btn.addEventListener("click",function(){
-        console.log(user.value[0]);
+    btn.addEventListener("click", function () {
         x++;
+        let a = 0;
+        let b = 0;
         let li = document.createElement("li");
-        if(user.value == "" || isNaN(user.value)){
-            let liTxt = document.createTextNode("輸入錯誤" + x);
+        if (user.value == "" || isNaN(user.value)) {
+            let liTxt = document.createTextNode("請輸入數字");
             li.appendChild(liTxt);
             ol.appendChild(li);
-        }else if(user.value[0] == user.value[1] || user.value[0] == user.value[2] || user.value[0] == user.value[3])
+        } else if (user.value[0] == user.value[1] || user.value[0] == user.value[2] || user.value[0] == user.value[3] || user.value[1] == user.value[2] || user.value[1] == user.value[3] || user.value[2] == user.value[3]) {
+            let liTxt = document.createTextNode("輸入錯誤");
+            li.appendChild(liTxt);
+            ol.appendChild(li);
+        } else if (user.value[0] == cpu[0] && user.value[1] == cpu[1] && user.value[2] == cpu[2] && user.value[3] == cpu[3]) {
+            win();
+        } else {
+            ifs();
+        }
+        function ifs() {
+            //A值的
+            if (user.value[0] == cpu[0]) {
+                a++;
+            }
+            if (user.value[1] == cpu[1]) {
+                a++;
+            }
+            if (user.value[2] == cpu[2]) {
+                a++;
+            }
+            if (user.value[3] == cpu[3]) {
+                a++;
+            }
+
+            //B值的
+            if (user.value[0] == cpu[1] || user.value[0] == cpu[2] || user.value[0] == cpu[3]) {
+                b++;
+            }
+            if (user.value[1] == cpu[0] || user.value[1] == cpu[2] || user.value[1] == cpu[3]) {
+                b++;
+            }
+            if (user.value[2] == cpu[0] || user.value[2] == cpu[1] || user.value[2] == cpu[3]) {
+                b++;
+            }
+            if (user.value[3] == cpu[0] || user.value[3] == cpu[1] || user.value[3] == cpu[2]) {
+                b++;
+            }
+            let liTxt = document.createTextNode(user.value + " " + a + "A" + b + "B");
+            li.appendChild(liTxt);
+            ol.appendChild(li);
+        }
     })
+    function win() {
+        let li = document.createElement("li");
+        let liTxt = document.createTextNode("您贏了！");
+        li.appendChild(liTxt);
+        ol.appendChild(li);
+        btn.disabled = true;
+        document.getElementById("reset").style.display = "block";
+    }
 </script>
+
 </html>
