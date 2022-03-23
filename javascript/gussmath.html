@@ -4,18 +4,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 300px;
+            margin: auto;
+            background-color: bisque;
+            padding: 1em;
+        }
+        .box h1{
+            text-align: center;
+        }
+        .box input {
+            width: 80%;
+            padding: 0.5em 0;
+        }
+        .box button{
+            width: 18%;
+            padding: 0.4em 0;
+        }
+        .box ol{
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <input type="text" id="user"><button type="button" id="btn">ADD</button>
+    <div class="box">
+        <h1>猜數字</h1>
+        <input type="text" id="user"><button type="button" id="btn">submit</button>
+        <ol>
 
+        </ol>
+    </div>
 </body>
 <script>
-    let bnt = document.querySelector("#btn");
-    btn.addEventListener("click",function(){
-        let user = document.querySelector("#user");
-        let x = user.value;
-        console.log(x[1]);
-        console.log(String(x).substring(0,1));
-    })
+    cpu = [Math.floor(Math.random()*10),Math.floor(Math.random()*10,Math.floor(Math.random()*10,Math.floor(Math.random()*10)];
 </script>
 </html>
