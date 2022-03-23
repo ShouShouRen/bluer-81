@@ -1,0 +1,29 @@
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery/dist/jquery.js"></script>
+</head>
+<body>
+    <h2>title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita consectetur, non, eos temporibus maxime explicabo impedit voluptatem nam omnis illum velit? Consequuntur quae cupiditate quas a delectus, nam maxime voluptate.</p>
+</body>
+<script>
+    // let h1 = document.getElementsByTagName("h1")[0];
+    // let p = document.getElementsByTagName("p")[0];
+    // p.style.display = "none";
+    // h1.addEventListener("click",function(){
+    //     if(p.style.display == "none" || p.style.display == ""){
+    //         p.style.display = "block";
+    //     }else{
+    //         p.style.display = "none";
+    //     }
+    // })
+    $("p").hide();
+    $("h1").click(function(){
+        $("p").toggle(500);
+    })
+</script>
+</html>
