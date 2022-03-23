@@ -66,13 +66,14 @@
     let btn = document.getElementById("btn");
     let ol = document.getElementsByTagName("ol")[0];
     btn.addEventListener("click",function(){
+        console.log(user.value[0]);
         x++;
         let li = document.createElement("li");
         if(user.value == "" || isNaN(user.value)){
             let liTxt = document.createTextNode("輸入錯誤" + x);
             li.appendChild(liTxt);
             ol.appendChild(li);
-        }
+        }else if(user.value[0] == user.value[1] || user.value[0] == user.value[2] || user.value[0] == user.value[3])
     })
 </script>
 </html>
