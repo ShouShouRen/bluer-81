@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,30 +57,30 @@
     setInterval(function(){
         h = window.scrollY;
         console.log(h);
-        if(h < 600){
+        if(h < 700){
             p1.style.display = "block"
             p2.style.display = "none"
             p3.style.display = "none"
             p4.style.display = "none"
-            p1.style.transform = "scale(" + (1 + h/1000) + ")";
-        }else if(h < 800){
+            p1.style.transform = "scale(" + (1 + h/100) + ")";
+        }else if(h < 1200){
             p1.style.display = "none";
             p3.style.display = "none"
             p4.style.display = "none"
             p2.style.display = "block";
-            p2.style.transform = "scale(" + (1 + h/1000) + ")";
-        }else if(h < 1000){
+            p2.style.transform = "scale(" + (1 + (h-700)/100) + ")";
+        }else if(h < 1700){
             p1.style.display = "none"
             p2.style.display = "none";
             p4.style.display = "none"
             p3.style.display = "block";
-            p3.style.transform = "scale(" + (1 + h/1000) + ")";
-        }else if(h < 1500){
+            p3.style.transform = "scale(" + (1 + (h-1200)/100) + ")";
+        }else if(h < 2000){
             p1.style.display = "none"
             p2.style.display = "none"
             p3.style.display = "none";
             p4.style.display = "block";
-            p4.style.transform = "scale(" + (1 + h/1000) + ")";
+            p4.style.transform = "scale(" + (1 + (h-1700)/100) + ")";
         }
     })
 </script>
