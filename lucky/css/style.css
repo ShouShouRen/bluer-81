@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+body{
+    background-image: url('../images/BG1600-1000.jpg');
+    background-size: cover;
+    background-position: center;
+}
+img{
+    width: 100%;
+    vertical-align: bottom;
+}
