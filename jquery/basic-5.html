@@ -7,14 +7,16 @@
     <script src="./jquery/dist/jquery.js"></script>
     <style>
         body{
-            height: 900px;
+            height: 10000px;
+            background-image: linear-gradient(red,blue);
         }
     </style>
 </head>
 <body>
-    <div id="gotop">TOP</div>
+    <!-- <div id="gotop">TOP</div> -->
 </body>
 <script>
+    $("body").append("<div id='gotop'>TOP</div>");
     $("#gotop").css({
         width: "3em",
         height: "3em",
@@ -29,6 +31,11 @@
         fontWeight: "900",
         fontFamily: "arial",
         cursor: "pointer"
+    });
+    $("#gotop").click(function(){
+        $("html,body").animate({
+            scrollTop: 0
+        })
     })
 </script>
 </html>
