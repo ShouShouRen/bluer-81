@@ -34,15 +34,20 @@
         fontFamily: "arial",
         cursor: "pointer"
     });
-
+    $("#gotop").hide();
     $("#gotop").click(function () {
         $("html,body").animate({
             scrollTop: 0
         })
     })
-    $(window).scroll(function(){
-            let h = $(window).scrollTop();
-            console.log(h);
+    $(window).scroll(function () {
+        let h = $(window).scrollTop();
+        console.log(h);
+        if(h < 1500){
+            $("#gotop").fadeOut();
+        }else{
+            $("#gotop").fadeIn();
+        }
     })
 </script>
 
