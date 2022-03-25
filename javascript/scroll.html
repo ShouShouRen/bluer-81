@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 500vh;
+            background-image: linear-gradient(red,blue);
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    let bodys = document.getElementsByTagName("body")[0];
+    let div = document.createElement("div");
+    let divTxt = document.createTextNode("TOP");
+    div.setAttribute("id","gotop");
+    div.appendChild(divTxt);
+    bodys.appendChild(div);
+    let gotop = document.getElementById("gotop");
+    gotop.style.width = "3em";
+    gotop.style.height = "3em";
+    gotop.style.backgroundColor = "#00000080";
+    gotop.style.fontFamily = "Arial";
+    gotop.style.fontWeight = "900";
+    gotop.style.color = "#FFF";
+    gotop.style.lineHeight = "3em";
+    gotop.style.textAlign = "center";
+    gotop.style.borderRadius = "50%";
+    gotop.style.position = "fixed";
+    gotop.style.bottom = "1em";
+    gotop.style.right = "1em";
+    gotop.style.transition = "all 500ms ease";
+    let h;
+    let it = setInterval(function(){
+        h = window.scrollY;
+        console.log(h);
+        if(h<800){
+            // gotop.style.display = "none";
+            // gotop.style.opacity = 0;
+            gotop.style.transform = "translateY(4em)";
+        }else{
+            // gotop.style.display = "block";
+            // gotop.style.opacity = 1;
+            gotop.style.transform = "translateY(-1em)"
+        }
+    })
+    console.log(h);
+
+    gotop.addEventListener("click",function(){
+        let html = document.getElementsByTagName("html")[0];
+        html.style.scrollBehavior = "smooth";
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    })
+</script>
+</html>
+
