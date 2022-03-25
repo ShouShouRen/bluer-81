@@ -13,3 +13,14 @@ img{
     width: 100%;
     vertical-align: bottom;
 }
+.container{
+    max-width: 1000px;
+}
+i{
+    font-size: 38px;
+    color: #fff;
+    cursor: pointer;
+}
+i:hover{
+    color: blue;
+}
