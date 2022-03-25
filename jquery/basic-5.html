@@ -1,4 +1,5 @@
 <html lang="zh-Hant-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,12 +7,13 @@
     <title>Document</title>
     <script src="./jquery/dist/jquery.js"></script>
     <style>
-        body{
+        body {
             height: 10000px;
-            background-image: linear-gradient(red,blue);
+            background-image: linear-gradient(red, blue);
         }
     </style>
 </head>
+
 <body>
     <!-- <div id="gotop">TOP</div> -->
 </body>
@@ -32,10 +34,16 @@
         fontFamily: "arial",
         cursor: "pointer"
     });
-    $("#gotop").click(function(){
+
+    $("#gotop").click(function () {
         $("html,body").animate({
             scrollTop: 0
         })
     })
+    $(window).scroll(function(){
+            let h = $(window).scrollTop();
+            console.log(h);
+    })
 </script>
+
 </html>
