@@ -29,3 +29,23 @@ footer{
     height: 60px;
     line-height: 60px;
 }
+a{
+    color: #ffc107;
+    text-decoration: none;
+    transition: all .3s linear;
+}
+a:hover{
+    color: #fff;
+}
+.box{
+    border-radius: 50%;
+    border: #ffc107 solid 5px;
+    font-size: 2em;
+    text-align: center;
+    transition: all .3s linear;
+}
+.box:hover{
+    border-radius: 50%;
+    border: #fff solid 5px;
+    color: #fff;
+}
