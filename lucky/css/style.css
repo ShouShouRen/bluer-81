@@ -20,7 +20,8 @@ i{
     font-size: 38px;
     color: #fff;
     cursor: pointer;
+    transition: all .3s linear;
 }
 i:hover{
-    color: blue;
+    color: blanchedalmond;
 }
