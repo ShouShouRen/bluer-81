@@ -25,3 +25,7 @@ i{
 i:hover{
     color: blanchedalmond;
 }
+footer{
+    height: 60px;
+    line-height: 60px;
+}
