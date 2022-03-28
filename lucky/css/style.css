@@ -49,3 +49,8 @@ a:hover{
     border: #fff solid 5px;
     color: #fff;
 }
+#list ul li{
+    text-align: center;
+    list-style: none;
+    font-size: 24px;
+}
